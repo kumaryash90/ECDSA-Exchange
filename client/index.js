@@ -136,12 +136,18 @@ document.getElementById("transfer-amount").addEventListener('click', () => {
             'Content-Type': 'application/json'
         }
     })
-    .then(res => res.json())
+    .then(res => {
+        if(res.status === 400) {
+            res.json().then(data => alert(data.msg));
+            return;
+        }
+        res.json();
+    })
     .then(({ balance }) => {
         accountBalance.textContent = "Balance: " + balance;
     })
     .catch(error => {
-        alert("invalid values");
+        console.log(error);
     });
 
     // reset fields

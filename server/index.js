@@ -52,12 +52,16 @@ app.post('/send', (req, res) => {
     const verified = verify(accounts[sender].publicX, accounts[sender].publicY, txnString, signature);
 
     if(verified) {
-        accounts[sender].balance -= Number(amount);
-        accounts[recepient].balance += Number(amount);
-        res.send({ balance: accounts[sender].balance });
+        if(accounts[sender].balance >= amount) {
+            accounts[sender].balance -= Number(amount);
+            accounts[recepient].balance += Number(amount);
+            res.send({ balance: accounts[sender].balance });
+        } else {
+            res.status(400).json({ msg: "insufficient funds" });
+        }
     } else {
-        console.log("can't verify");
-        res.status(400).send("can't verify");
+        console.log("invalid details");
+        res.status(400).json({ msg: "invalid details"});
     }
 });
 
