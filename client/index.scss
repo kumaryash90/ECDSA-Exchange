@@ -2,7 +2,8 @@ body {
   margin: 0;
   font-family: 'Muli', sans-serif;
   font-weight: 300;
-  background-color: rgb(130, 130, 204);
+  //background-color: rgb(130, 130, 204);
+  background-color: #eee;
 }
 
 .inputs {
@@ -18,9 +19,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: #eee;
-  border-radius: 10px;
-  box-shadow: rgba(100, 100, 111, 1) 0px 7px 29px 0px;
+  //background-color: #eee;
+  //border-radius: 10px;
+  //box-shadow: rgba(100, 100, 111, 1) 0px 7px 29px 0px;
 }
 
 .inner-component {
