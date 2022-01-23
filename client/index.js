@@ -99,14 +99,26 @@ document.getElementById("sign").addEventListener('change', () => {
 */
 document.getElementById("transfer-amount").addEventListener('click', () => {
     let body;
+    if(recepient === "" || amount === "") {
+        alert("please enter valid details");
+        return;
+    }
 
     // create transaction body
     if(enterPrivateKey) {
         const privateKey = document.getElementById("pvt-key-value").value;
+        if(privateKey === "") {
+            alert("private key can't be empty");
+            return;
+        }
         body = sign(privateKey, txnString);
     } else {
         const r = document.getElementById("r-value").value;
         const s = document.getElementById("s-value").value;
+        if(r === "" || s === "") {
+            alert("r & s can't be empty");
+            return;
+        }
         const signature = {
             r,
             s
@@ -127,6 +139,9 @@ document.getElementById("transfer-amount").addEventListener('click', () => {
     .then(res => res.json())
     .then(({ balance }) => {
         accountBalance.textContent = "Balance: " + balance;
+    })
+    .catch(error => {
+        alert("invalid values");
     });
 
     // reset fields
