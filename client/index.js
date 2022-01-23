@@ -141,7 +141,7 @@ document.getElementById("transfer-amount").addEventListener('click', () => {
             res.json().then(data => alert(data.msg));
             return;
         }
-        res.json();
+        return res.json();
     })
     .then(({ balance }) => {
         accountBalance.textContent = "Balance: " + balance;
