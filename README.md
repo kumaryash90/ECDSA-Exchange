@@ -1,6 +1,6 @@
 # ECDSA-Exchange
-# ChainShot Bootcamp Jan 2022
-# Week-1 Project: ECDSA Exchange
+## ChainShot Bootcamp Jan 2022
+### Week-1 Project: ECDSA Exchange
 
 
 Client Side
