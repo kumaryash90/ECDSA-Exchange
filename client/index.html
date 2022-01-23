@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>ECDSA Exchange</title>
+    <script type="module" src="index.js"></script>
+    
+  </head>
+  
+  <body>
+
+    <div class="components">
+      <div class="inner-component wallet">
+        <h1> Your Wallet </h1>
+          <select class="inputs" id="exchange-address"></select>
+        <p id="balance">Balance: 0</p>
+      </div>
+
+      <div class="inner-component send">
+        <h1> Send Amount </h1>
+        <input class="inputs" type="text" id="send-amount" placeholder="Send Amount" />
+        <input class="inputs" type="text" id="recepient" placeholder="Recipient" />
+        
+
+        <div class="send-component signature">
+          <input type="radio" class="radio" id="pvt-key" name="sign-radio" checked>
+          <label for="pvt-key">Enter Private Key</label><br>
+          <input class="inputs radio-text" type="text" id="pvt-key-value" placeholder="Enter private key">
+        </div>
+        <div class="send-component signature">
+          <input type="radio" class="radio" id="sign" name="sign-radio" >
+          <label for="sign">Sign It Yourself</label><br>
+          <div>
+            <input class="inputs radio-text" type="text" id="r-value" placeholder="Enter r value" disabled>
+            <input class="inputs radio-text" type="text" id="s-value" placeholder="Enter s value" disabled>
+          </div>
+        </div>
+        <div id="txn-string">
+          <!-- <input type="text" id="pvt-key-value" placeholder="Enter private key"> -->
+        </div>
+
+        <div class="button" id="transfer-amount">
+          Transfer Amount
+        </div>
+      </div>
+    </div>
+    
+  </body>
+
+</html>

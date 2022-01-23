@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: 'Muli', sans-serif;
+  font-weight: 300;
+  background-color: #eee;
+}
+
+.inputs {
+  padding: 9px 25px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.components {
+  width: 700px;
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inner-component {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  background-color: #eee;
+  margin: 20px;
+  padding: 30px 50px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+
+  h1 {
+    margin: 0 0 20px;
+  }
+}
+
+.send {
+  align-items: center;
+}
+
+.send-component {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  //background-color: green;
+}
+
+.send .inputs {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+#balance {
+  padding: 9px 25px;
+  border: 2px solid black;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#txn-string {
+  inline-size: 80%;
+  overflow-wrap: break-word;
+  padding: 9px 25px;
+  border-top: 2px solid grey;
+  border-bottom: 2px solid grey;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 1em;
+  display: none;
+}
+
+.button {
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: none;
+  padding: 9px 25px;
+  font-size: 0.7em;
+  letter-spacing: 0.7px;
+  background-color: #f58427;
+  width: 88%;
+  transition: 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+}
+
